@@ -5,10 +5,11 @@ import {
   increment,
   decrement,
   add,
-  deleteResult,
+  substract,
   storeResult,
-  substract
-} from "../../store/actions/actions";
+  deleteResult
+} from "../../store/actions/index";
+
 import CounterControl from "../../components/CounterControl/CounterControl";
 import CounterOutput from "../../components/CounterOutput/CounterOutput";
 
