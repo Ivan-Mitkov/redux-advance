@@ -15,9 +15,12 @@ export const saveResult = result => {
   };
   export const storeResult = res => {
     //get dispatch from redux-thunk
-    return dispatch => {
+    return (dispatch,getState) => {
+      //access the state using name of the props from container mapStateToProps 
+      const oldCounter=getState().ctr.counter;
       //simulate async action
       setTimeout(() => {
+        console.log('Old counter: ',oldCounter);
         //if pass store it will create infinite loop so the creation of saveResult
         dispatch(saveResult(res));
       }, 2000);
